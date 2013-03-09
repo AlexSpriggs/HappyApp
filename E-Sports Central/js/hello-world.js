@@ -6,10 +6,42 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     getLocation();
     navigator.splashscreen.hide();
+    niceWords();
 }
 
 function getLocation() {
     myNewFunction();
+}
+
+function niceWords() {
+    var mySayings = new Array();
+    mySayings[0] = "I love you";
+    mySayings[1] = "I like it when you smile";
+    mySayings[2] = "You are beautiful";
+    mySayings[3] = "You are amazing";
+    mySayings[4] = "I love the way you laugh";
+    mySayings[5] = "You have an amazing personality";
+    mySayings[6] = "You always make me smile";
+    mySayings[7] = "You complete me";
+    mySayings[8] = "You should be a model";
+    mySayings[9] = "You are sexy as hell";
+    mySayings[10] = "You are my favorite person in the world";
+    mySayings[11] = "I kinda like you... alot";
+    mySayings[12] = "You are gorgeous in every way, shape, and form";
+    mySayings[13] = "I love the way you dress";
+    mySayings[14] = "You restore my faith in Humanity";
+    mySayings[15] = "You look incredible today";
+    mySayings[16] = "You always make me laugh";
+    mySayings[17] = "You do the most amazing things";
+    mySayings[18] = "I believe in you";
+    mySayings[19] = "<3";
+    mySayings[20] = "I like what you did with your hair";
+    mySayings[21] = "You have beautiful eyes";
+    
+    
+    var index = Math.floor(Math.random() * mySayings.length);
+    
+    document.getElementById('Saying').innerHTML = "<center>" + mySayings[index] + "</center>";
 }
   
 function myNewFunction(){
