@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>The Happy App</title>
+        <link href="jquery-mobile/jquery.mobile-1.2.0.min.css" rel="stylesheet" type="text/css" />
+        <link href="styles/main.css" rel="stylesheet" type="text/css" />
+
+        <script src="cordova.js" type="text/javascript"></script>
+        <script src="jquery-mobile/jquery-1.8.2.min.js" type="text/javascript"></script>
+        <script src="jquery-mobile/jquery.mobile-1.2.0.min.js" type="text/javascript"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="js/hello-world.js" type="text/javascript"></script>
+    </head> 
+    <body> 
+        
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>Be Happy</h1>
+            </div>
+            <div data-role="content">
+                <div id="test">
+                <p id="Saying">
+                </p>
+            </div>
+                <p><button data-theme="a" onClick="niceWords();">Something Nice</button></p>
+            </div>
+        </div>
+    </body>
+    </html>
