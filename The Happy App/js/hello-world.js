@@ -4,13 +4,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 // PhoneGap is ready
 function onDeviceReady() {
-    getLocation();
     navigator.splashscreen.hide();
     niceWords();
-}
-
-function getLocation() {
-    myNewFunction();
 }
 
 function niceWords() {
@@ -27,7 +22,7 @@ function niceWords() {
     mySayings[9] = "You are sexy as hell";
     mySayings[10] = "You are my favorite person in the world";
     mySayings[11] = "I kinda like you... alot";
-    mySayings[12] = "You are gorgeous in every way, shape, and form";
+    mySayings[12] = "You are gorgeous in every way";
     mySayings[13] = "I love the way you dress";
     mySayings[14] = "You restore my faith in Humanity";
     mySayings[15] = "You look incredible today";
@@ -37,60 +32,43 @@ function niceWords() {
     mySayings[19] = "<3";
     mySayings[20] = "I like what you did with your hair";
     mySayings[21] = "You have beautiful eyes";
-    
+    mySayings[22] = "I like your style";
+    mySayings[23] = "I like the way you move";
+    mySayings[24] = "You are so charming";
+    mySayings[25] = "Hello, good looking";
+    mySayings[26] = "That looks nice on you";
+    mySayings[27] = "I dig you";
+    mySayings[28] = "You're so smart";
+    mySayings[29] = "I'm glad we met";
+    mySayings[30] = "I made this app for you";
+    mySayings[31] = "I told all my friends how cool you are";
+    mySayings[32] = "You're #1 in my book";
+    mySayings[33] = "When I grow up, I want to be just like you";
+    mySayings[34] = "I support all of your decisions";
+    mySayings[35] = "Being awesome is hard, but you'll manage";
+    mySayings[36] = "You look so perfect";
+    mySayings[37] = "You're so rad";
+    mySayings[38] = "You could survive a zombie apocalypse";
+    mySayings[39] =  "You are a champ";
+    mySayings[40] = "You make babies smile";
+    mySayings[41] = "You make me feel like I'm on top of the world";
+    mySayings[42] = "You have good taste";
+    mySayings[43] = "I like your face";
+    mySayings[44] = "You are infatuating";
+    mySayings[45] = "Even my cat likes you";
+    mySayings[46] = "All I want for Christmas is you";
+    mySayings[47] = "You smell nice";
+    mySayings[48] = "I'd let you eat the white part of my Oreo";
+    mySayings[49] = "The Force is strong with you";
+    mySayings[50] = "You're the bee's knees";
+    mySayings[51] = "You are well groomed";
+    mySayings[52] = "I feel the need to impress you";
+    mySayings[53] = "You are invited to my birthday party";
+    mySayings[54] = "I would share my dessert with you";
+    mySayings[55] = "You are full of youth";
+    mySayings[56] = "Your manners are superb";
     
     var index = Math.floor(Math.random() * mySayings.length);
     
     document.getElementById('Saying').innerHTML = "<center>" + mySayings[index] + "</center>";
-}
-  
-function myNewFunction(){
-    navigator.geolocation.getCurrentPosition(onGeolocationSuccess, onGeolocationError);
-}
-  
-//=======================Say Hello (Page 1) Operations=======================//
-function sayHello() {
-    var sayHelloInputElem = document.getElementById('helloWorldInput');
-    var sayHelloTextElem = document.getElementById('helloWorldText');
-    var inputText = document.getElementById('txtName');
-    
-    sayHelloTextElem.innerHTML = 'Hello, ' + inputText.value + '!';
-    sayHelloTextElem.style.display = 'block';
-    sayHelloInputElem.style.display = 'none';
-}
-
-function sayHelloReset() {
-    var sayHelloInputElem = document.getElementById('helloWorldInput');
-    var sayHelloTextElem = document.getElementById('helloWorldText');
-    var inputText = document.getElementById('txtName');
-    
-    inputText.value = '';
-    sayHelloTextElem.style.display = 'none';
-    sayHelloInputElem.style.display = 'block';
-}
-
-//=======================Geolocation Operations=======================//
-// onGeolocationSuccess Geolocation
-function onGeolocationSuccess(position) {
-    // Use Google API to get the location data for the current coordinates
-    var geocoder = new google.maps.Geocoder();
-    var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-    geocoder.geocode({ "latLng": latlng }, function (results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-            if ((results.length > 1) && results[1]) {
-                $("#myLocation").html(results[1].formatted_address);
-            }
-        }
-    });
-    
-    // Use Google API to get a map of the current location
-    // http://maps.googleapis.com/maps/api/staticmap?size=280x300&maptype=hybrid&zoom=16&markers=size:mid%7Ccolor:red%7C42.375022,-71.273729&sensor=true
-    var googleApis_map_Url = 'http://maps.googleapis.com/maps/api/staticmap?size=300x300&maptype=hybrid&zoom=16&sensor=true&markers=size:mid%7Ccolor:red%7C' + latlng;
-    var mapImg = '<img src="' + googleApis_map_Url + '" />';
-    $("#map_canvas").html(mapImg);
-}
-
-// onGeolocationError Callback receives a PositionError object
-function onGeolocationError(error) {
-    $("#myLocation").html("<span class='err'>" + error.message + "</span>");
 }
