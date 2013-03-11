@@ -67,6 +67,17 @@ function niceWords() {
     mySayings[54] = "I would share my dessert with you";
     mySayings[55] = "You are full of youth";
     mySayings[56] = "Your manners are superb";
+    mySayings[57] = "I'd take you to a dance";
+    mySayings[58] = "I want to dance the night away with you";
+    mySayings[59] = "You are an angel";
+    mySayings[60] = "You make life worth living";
+    mySayings[61] = "You rock my world";
+    mySayings[62] = "You mean more to me then anything else";
+    mySayings[63] = "Without you I would be nothing";
+    mySayings[64] = "You can accomplish anything";
+    mySayings[65] = "You are the perfect human specimen";
+    mySayings[66] = "You mean the world to me";
+    mySayings[67] = "Songs will be written about you";
     
     var index = Math.floor(Math.random() * mySayings.length);
     
